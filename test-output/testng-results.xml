@@ -1,21 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="37616" started-at="2015-02-22T19:18:25Z" finished-at="2015-02-22T19:19:02Z">
+  <suite name="Default suite" duration-ms="43160" started-at="2015-02-22T21:18:13Z" finished-at="2015-02-22T21:18:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="37616" started-at="2015-02-22T19:18:25Z" finished-at="2015-02-22T19:19:02Z">
+    <test name="Default test" duration-ms="43160" started-at="2015-02-22T21:18:13Z" finished-at="2015-02-22T21:18:56Z">
       <class name="tests.LoginPageTest">
-        <test-method status="PASS" signature="initTesting()[pri:0, instance:tests.LoginPageTest@256216b3]" name="initTesting" is-config="true" duration-ms="15376" started-at="2015-02-22T20:18:25Z" description="WebDriver set up" finished-at="2015-02-22T20:18:40Z">
+        <test-method status="PASS" signature="initTesting()[pri:0, instance:tests.LoginPageTest@d7b1517]" name="initTesting" is-config="true" duration-ms="12369" started-at="2015-02-22T22:18:13Z" description="WebDriver set up" finished-at="2015-02-22T22:18:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initTesting -->
-        <test-method status="PASS" signature="logInTest()[pri:0, instance:tests.LoginPageTest@256216b3]" name="logInTest" duration-ms="15439" started-at="2015-02-22T20:18:40Z" description="Login the application" finished-at="2015-02-22T20:18:55Z">
+        <test-method status="PASS" signature="logInTest()[pri:0, instance:tests.LoginPageTest@d7b1517]" name="logInTest" duration-ms="9516" started-at="2015-02-22T22:18:25Z" description="Login the application" finished-at="2015-02-22T22:18:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.LoginPageTest@256216b3]" name="tearDown" is-config="true" duration-ms="6779" started-at="2015-02-22T20:18:55Z" description="Closing Browser" finished-at="2015-02-22T20:19:02Z">
+        <test-method status="FAIL" signature="sendEmail()[pri:0, instance:tests.LoginPageTest@d7b1517]" name="sendEmail" duration-ms="15977" started-at="2015-02-22T22:18:35Z" description="Save Email To Draft" depends-on-methods="tests.LoginPageTest.logInTest" finished-at="2015-02-22T22:18:50Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"id","selector":"compose_292_ab_compose_subj"}
+Command duration or timeout: 10.12 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
+System info: host: 'EPPLKRAW0119', ip: '10.0.0.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 26aa5f97-e96c-46ea-8f34-e3f3b26bbb42]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"compose_292_ab_compose_subj"}
+Command duration or timeout: 10.12 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
+System info: host: 'EPPLKRAW0119', ip: '10.0.0.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 26aa5f97-e96c-46ea-8f34-e3f3b26bbb42
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at pageObjects.LogInPage.emailSubject(LogInPage.java:35)
+	at tests.LoginPageTest.sendEmail(LoginPageTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"compose_292_ab_compose_subj"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
+System info: host: 'EPPLKRAW0119', ip: '10.0.0.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous6150087405161764899webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:7)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous6150087405161764899webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendEmail -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.LoginPageTest@d7b1517]" name="tearDown" is-config="true" duration-ms="5275" started-at="2015-02-22T22:18:50Z" description="Closing Browser" finished-at="2015-02-22T22:18:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

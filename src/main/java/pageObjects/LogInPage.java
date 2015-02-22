@@ -28,11 +28,11 @@ public class LogInPage extends DriverClass {
 	}
 	
 	public WebElement emailReceiver(){
-		return getTheDriverNow().findElement(By.className("To"));
+		return getTheDriverNow().findElement(By.xpath("//div[@class='compose__header__field js-compose-labels compose__labels']/textarea"));
 	}
 	
 	public WebElement emailSubject(){
-		return getTheDriverNow().findElement(By.className("Subject"));
+		return getTheDriverNow().findElement(By.xpath("//div[@class='compose__header__field__box']/input"));
 	}
 	
 	public WebElement emailBody(){
@@ -52,7 +52,7 @@ public class LogInPage extends DriverClass {
 		return getTheDriverNow().findElement(By.xpath("////div[@class='b-nav b-nav_folders b-nav_icons']/div[3]"));
 	}
 	
-	public List<WebElement> getListOfDrafts(){
-		return new List<WebElement> (getTheDriverNow().findElements(By.xpath("//div[@data-mnemo='letters']/div[2]/div")));
-	}
+//	public List<WebElement> getListOfDrafts(){
+//		return new List<WebElement> (getTheDriverNow().findElements(By.xpath("//div[@data-mnemo='letters']/div[2]/div")));
+//	}
 }

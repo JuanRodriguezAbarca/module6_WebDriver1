@@ -8,6 +8,7 @@
           <include name="tearDown"/>
           <include name="initTesting"/>
           <include name="logInTest"/>
+          <include name="sendEmail"/>
         </methods>
       </class> <!-- tests.LoginPageTest -->
     </classes>
