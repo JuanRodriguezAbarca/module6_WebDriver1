@@ -6,11 +6,11 @@ public class DriverClass {
 	
 	private static WebDriver driver;
 	
-	public static WebDriver getTheDriverOstias(){
+	public static WebDriver getTheDriverNow(){
 		return driver;
 	}
 	
-	public void setTheDriverOstias(WebDriver driver){
+	public void setTheDriverNow(WebDriver driver){
 		DriverClass.driver = driver;
 	}
 

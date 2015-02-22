@@ -18,20 +18,20 @@ public class LoginPageTest extends DriverClass{
 	
 	@BeforeClass(description="WebDriver set up")
 	public void initTesting(){
-		setTheDriverOstias(new FirefoxDriver());
-		getTheDriverOstias().manage().window().maximize();
-		getTheDriverOstias().get("https://mail.ru/");
+		setTheDriverNow(new FirefoxDriver());
+		getTheDriverNow().manage().window().maximize();
+		getTheDriverNow().get("https://mail.ru/");
 		System.out.println("Site Loaded!!!");
 	}
 	
 	@AfterClass(description="Closing Browser",alwaysRun=true)
 	public void tearDown(){
-		getTheDriverOstias().quit();
+		getTheDriverNow().quit();
 	}
 
 	@Test(description="Login the application")
 	public void logInTest(){
-		String titulo = getTheDriverOstias().getTitle();
+		String titulo = getTheDriverNow().getTitle();
 		System.out.println(titulo);
 		System.out.println("trying to find anything");
 		loginPage.nameLoginTextBox().clear();
@@ -41,8 +41,21 @@ public class LoginPageTest extends DriverClass{
 		loginPage.logInButton().click();
 		String userLogged = loginPage.userLogged().getText();
 		System.out.println(userLogged);
-
+		//The test:
 		Assert.assertTrue(userLogged.contains(constants.USERNAME));
+	}
+	
+	@Test(description="Save Email To Draft", dependsOnMethods="logInTest")
+	public void sendEmail(){
+		loginPage.composeEmailButton().click();
+		loginPage.emailReceiver().sendKeys(constants.RECIVER);
+		loginPage.emailSubject().sendKeys("TestWebDriver");
+		loginPage.emailBody().sendKeys(constants.SUBJECT);
+		loginPage.saveToDraftsButton().click();
+		loginPage.goToDraftsButton().click();
+//		getTheDriverNow().switchTo().alert().accept();
+		
+		
 	}
 
 }
