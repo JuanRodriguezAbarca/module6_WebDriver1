@@ -2,7 +2,6 @@ package tests;
 
 import junit.framework.Assert;
 
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -14,7 +13,7 @@ import pageObjects.LogInPage;
 
 public class LoginPageTest extends DriverClass{
 	
-	pageObjects.LogInPage loginPage = new pageObjects.LogInPage();
+	LogInPage loginPage = new LogInPage();
 	Constants constants = new Constants();
 	
 	@BeforeClass(description="WebDriver set up")
@@ -27,7 +26,7 @@ public class LoginPageTest extends DriverClass{
 	
 	@AfterClass(description="Closing Browser",alwaysRun=true)
 	public void tearDown(){
-		getTheDriverOstias().close();
+		getTheDriverOstias().quit();
 	}
 
 	@Test(description="Login the application")
@@ -37,8 +36,8 @@ public class LoginPageTest extends DriverClass{
 		System.out.println("trying to find anything");
 		loginPage.nameLoginTextBox().clear();
 		loginPage.nameLoginTextBox().sendKeys(constants.USERNAME);
-		loginPage.passwordLoginTextBox().clear();
-		loginPage.passwordLoginTextBox().sendKeys(constants.PASSWORD);
+		LogInPage.passwordLoginTextBox().clear();
+		LogInPage.passwordLoginTextBox().sendKeys(constants.PASSWORD);
 		loginPage.logInButton().click();
 		String userLogged = loginPage.userLogged().getText();
 		System.out.println(userLogged);
