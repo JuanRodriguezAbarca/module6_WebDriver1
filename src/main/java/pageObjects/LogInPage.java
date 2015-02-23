@@ -5,7 +5,6 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.thoughtworks.selenium.webdriven.commands.WaitForCondition;
 
 import utils.DriverClass;
 
@@ -43,15 +42,6 @@ public class LogInPage extends DriverClass {
 		return getTheDriverNow().findElement(By.xpath("//body[@class='mceContentBody ']"));
 	}
 	
-//	private WebElement saveOptionButton(){
-//		return getTheDriverNow().findElement(By.xpath("//div[@class='b-toolbar__item'][1]/div[1]"));
-//	}
-	
-//	public WebElement saveToDraftsButton(){
-//		saveOptionButton().click();
-//		return getTheDriverNow().findElement(By.xpath("//a[@data-name='saveDraft']"));
-//	}
-//	
 	public WebElement goToDraftsButton(){
 		return getTheDriverNow().findElement(By.xpath("//div[@class='b-nav b-nav_folders b-nav_icons']/div[3]/a"));
 	}

@@ -51,22 +51,15 @@ public class LoginPageTest extends DriverClass{
 	public void sendEmail() throws Throwable{
 		loginPage.composeEmailButton().click();
 		
+		loginPage.emailReceiver().sendKeys(constants.RECIVER);
+		loginPage.emailSubject().sendKeys("TestWebDriver");
+
 		IframeHelper.goToFrameByID(constants.IFRAMEBODYMAIL);
 		loginPage.emailBody().sendKeys(constants.SUBJECT);
 		IframeHelper.driverBackToMain();
 		Thread.sleep(5000);
-		IframeHelper.driverBackToMain();
-		
-		loginPage.emailReceiver().sendKeys(constants.RECIVER);
-		loginPage.emailSubject().sendKeys("TestWebDriver");
 
-//		IframeHelper.goToFrameByID(constants.IFRAMEBODYMAIL);
-//		loginPage.emailBody().sendKeys(constants.SUBJECT);
-//		IframeHelper.driverBackToMain();
-		Thread.sleep(5000);
-//		IframeHelper.driverBackToMain();
-
-//		loginPage.saveToDraftsButton().click();
+		loginPage.saveToDraftsButton().click();
 		loginPage.goToDraftsButton().click();
 		Thread.sleep(5000);
 //		getTheDriverNow().switchTo().alert().accept();
