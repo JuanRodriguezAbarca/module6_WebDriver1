@@ -36,11 +36,11 @@ public class LogInPage extends DriverClass {
 	}
 	
 	public WebElement emailBody(){
-		return getTheDriverNow().findElement(By.id("tinymce"));
+		return getTheDriverNow().findElement(By.xpath("//body[@class='mceContentBody']/br[1]"));
 	}
 	
 	private WebElement saveOptionButton(){
-		return getTheDriverNow().findElement(By.xpath("//div[@class='b-dropdown__ctrl']"));
+		return getTheDriverNow().findElement(By.xpath("//div[@class='b-dropdown__ctrl ']"));
 	}
 	
 	public WebElement saveToDraftsButton(){
@@ -49,7 +49,7 @@ public class LogInPage extends DriverClass {
 	}
 	
 	public WebElement goToDraftsButton(){
-		return getTheDriverNow().findElement(By.xpath("////div[@class='b-nav b-nav_folders b-nav_icons']/div[3]"));
+		return getTheDriverNow().findElement(By.xpath("//div[@class='b-nav b-nav_folders b-nav_icons']/div[3]"));
 	}
 	
 //	public List<WebElement> getListOfDrafts(){

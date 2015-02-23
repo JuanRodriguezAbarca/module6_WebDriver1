@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43160" started-at="2015-02-22T21:18:13Z" finished-at="2015-02-22T21:18:56Z">
+  <suite name="Default suite" duration-ms="42559" started-at="2015-02-23T12:42:56Z" finished-at="2015-02-23T12:43:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="43160" started-at="2015-02-22T21:18:13Z" finished-at="2015-02-22T21:18:56Z">
+    <test name="Default test" duration-ms="42559" started-at="2015-02-23T12:42:56Z" finished-at="2015-02-23T12:43:39Z">
       <class name="tests.LoginPageTest">
-        <test-method status="PASS" signature="initTesting()[pri:0, instance:tests.LoginPageTest@d7b1517]" name="initTesting" is-config="true" duration-ms="12369" started-at="2015-02-22T22:18:13Z" description="WebDriver set up" finished-at="2015-02-22T22:18:25Z">
+        <test-method status="PASS" signature="initTesting()[pri:0, instance:tests.LoginPageTest@d7b1517]" name="initTesting" is-config="true" duration-ms="13248" started-at="2015-02-23T13:42:56Z" description="WebDriver set up" finished-at="2015-02-23T13:43:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initTesting -->
-        <test-method status="PASS" signature="logInTest()[pri:0, instance:tests.LoginPageTest@d7b1517]" name="logInTest" duration-ms="9516" started-at="2015-02-22T22:18:25Z" description="Login the application" finished-at="2015-02-22T22:18:34Z">
+        <test-method status="PASS" signature="logInTest()[pri:0, instance:tests.LoginPageTest@d7b1517]" name="logInTest" duration-ms="9528" started-at="2015-02-23T13:43:09Z" description="Login the application" finished-at="2015-02-23T13:43:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInTest -->
-        <test-method status="FAIL" signature="sendEmail()[pri:0, instance:tests.LoginPageTest@d7b1517]" name="sendEmail" duration-ms="15977" started-at="2015-02-22T22:18:35Z" description="Save Email To Draft" depends-on-methods="tests.LoginPageTest.logInTest" finished-at="2015-02-22T22:18:50Z">
+        <test-method status="FAIL" signature="sendEmail()[pri:0, instance:tests.LoginPageTest@d7b1517]" name="sendEmail" duration-ms="15656" started-at="2015-02-23T13:43:19Z" description="Save Email To Draft" depends-on-methods="tests.LoginPageTest.logInTest" finished-at="2015-02-23T13:43:35Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unable to locate element: {"method":"id","selector":"compose_292_ab_compose_subj"}
+              <![CDATA[Unable to locate element: {"method":"id","selector":"compose_272_composeEditor_ifr"}
 Command duration or timeout: 10.12 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
-System info: host: 'EPPLKRAW0119', ip: '10.0.0.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
+System info: host: 'EPPLKRAW0119', ip: '10.143.13.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 26aa5f97-e96c-46ea-8f34-e3f3b26bbb42]]>
+Session ID: 9d8b4dcc-109b-46a0-b601-8654189951f6]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"compose_292_ab_compose_subj"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"compose_272_composeEditor_ifr"}
 Command duration or timeout: 10.12 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
-System info: host: 'EPPLKRAW0119', ip: '10.0.0.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
+System info: host: 'EPPLKRAW0119', ip: '10.143.13.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 26aa5f97-e96c-46ea-8f34-e3f3b26bbb42
+Session ID: 9d8b4dcc-109b-46a0-b601-8654189951f6
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -47,8 +47,8 @@ Session ID: 26aa5f97-e96c-46ea-8f34-e3f3b26bbb42
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
 	at org.openqa.selenium.By$ById.findElement(By.java:214)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at pageObjects.LogInPage.emailSubject(LogInPage.java:35)
-	at tests.LoginPageTest.sendEmail(LoginPageTest.java:52)
+	at tests.IframeHelper.goToFrameByID(IframeHelper.java:13)
+	at tests.LoginPageTest.sendEmail(LoginPageTest.java:55)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -73,20 +73,20 @@ Session ID: 26aa5f97-e96c-46ea-8f34-e3f3b26bbb42
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"compose_292_ab_compose_subj"}
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"compose_272_composeEditor_ifr"}
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
-System info: host: 'EPPLKRAW0119', ip: '10.0.0.2', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
+System info: host: 'EPPLKRAW0119', ip: '10.143.13.4', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous6150087405161764899webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:7)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous6150087405161764899webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous9191820326677100153webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:7)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous9191820326677100153webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendEmail -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.LoginPageTest@d7b1517]" name="tearDown" is-config="true" duration-ms="5275" started-at="2015-02-22T22:18:50Z" description="Closing Browser" finished-at="2015-02-22T22:18:56Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.LoginPageTest@d7b1517]" name="tearDown" is-config="true" duration-ms="4083" started-at="2015-02-23T13:43:35Z" description="Closing Browser" finished-at="2015-02-23T13:43:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

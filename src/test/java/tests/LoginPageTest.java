@@ -15,6 +15,7 @@ public class LoginPageTest extends DriverClass{
 	
 	LogInPage loginPage = new LogInPage();
 	Constants constants = new Constants();
+	IframeHelper frameHelper =  new IframeHelper();
 	
 	@BeforeClass(description="WebDriver set up")
 	public void initTesting(){
@@ -50,7 +51,12 @@ public class LoginPageTest extends DriverClass{
 		loginPage.composeEmailButton().click();
 		loginPage.emailReceiver().sendKeys(constants.RECIVER);
 		loginPage.emailSubject().sendKeys("TestWebDriver");
+
+		IframeHelper.goToFrameByID(constants.IFRAMEBODYMAIL);
+				
 		loginPage.emailBody().sendKeys(constants.SUBJECT);
+		
+		
 		loginPage.saveToDraftsButton().click();
 		loginPage.goToDraftsButton().click();
 //		getTheDriverNow().switchTo().alert().accept();
