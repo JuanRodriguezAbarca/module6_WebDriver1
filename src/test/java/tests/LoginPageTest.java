@@ -1,6 +1,6 @@
 package tests;
 
-import junit.framework.Assert;
+import org.testng.Assert;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
@@ -50,14 +50,23 @@ public class LoginPageTest extends DriverClass{
 	@Test(description="Save Email To Draft", dependsOnMethods="logInTest")
 	public void sendEmail() throws Throwable{
 		loginPage.composeEmailButton().click();
-		loginPage.emailReceiver().sendKeys(constants.RECIVER);
-		loginPage.emailSubject().sendKeys("TestWebDriver");
-
+		
 		IframeHelper.goToFrameByID(constants.IFRAMEBODYMAIL);
 		loginPage.emailBody().sendKeys(constants.SUBJECT);
 		IframeHelper.driverBackToMain();
+		Thread.sleep(5000);
+		IframeHelper.driverBackToMain();
 		
-		loginPage.saveToDraftsButton().click();
+		loginPage.emailReceiver().sendKeys(constants.RECIVER);
+		loginPage.emailSubject().sendKeys("TestWebDriver");
+
+//		IframeHelper.goToFrameByID(constants.IFRAMEBODYMAIL);
+//		loginPage.emailBody().sendKeys(constants.SUBJECT);
+//		IframeHelper.driverBackToMain();
+		Thread.sleep(5000);
+//		IframeHelper.driverBackToMain();
+
+//		loginPage.saveToDraftsButton().click();
 		loginPage.goToDraftsButton().click();
 		Thread.sleep(5000);
 //		getTheDriverNow().switchTo().alert().accept();
