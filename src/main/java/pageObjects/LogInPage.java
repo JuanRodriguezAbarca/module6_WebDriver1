@@ -1,7 +1,5 @@
 package pageObjects;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -38,11 +36,11 @@ public class LogInPage extends DriverClass {
 	}
 	
 	public WebElement emailBody(){
-		return getTheDriverNow().findElement(By.xpath("//body[@class='mceContentBody']/br[1]"));
+		return getTheDriverNow().findElement(By.xpath("//body[@class='mceContentBody ']"));
 	}
 	
 	private WebElement saveOptionButton(){
-		return getTheDriverNow().findElement(By.xpath("//div[@class='b-dropdown__ctrl ']"));
+		return getTheDriverNow().findElement(By.xpath("//div[@class='b-toolbar__item'][1]/div[1]"));
 	}
 	
 	public WebElement saveToDraftsButton(){

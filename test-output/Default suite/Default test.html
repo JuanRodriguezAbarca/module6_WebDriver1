@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Feb 23 13:42:56 CET 2015</td>
+<td>Started on:</td><td>Mon Feb 23 16:00:00 CET 2015</td>
 </tr>
-<tr><td>Total time:</td><td>42 seconds (42559 ms)</td>
+<tr><td>Total time:</td><td>48 seconds (48753 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,14 +76,13 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='tests.LoginPageTest.sendEmail()'><b>sendEmail</b><br>Test class: tests.LoginPageTest<br>Test method: Save Email To Draft</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;compose_272_composeEditor_ifr&quot;}
-Command duration or timeout: 10.12 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 10.08 seconds
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
 System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.13.4&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9d8b4dcc-109b-46a0-b601-8654189951f6
+Session ID: 20b39621-3a77-4262-a1a5-b985c8dba060
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -91,12 +90,10 @@ Session ID: 9d8b4dcc-109b-46a0-b601-8654189951f6
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at tests.IframeHelper.goToFrameByID(IframeHelper.java:13)
-	at tests.LoginPageTest.sendEmail(LoginPageTest.java:55)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at pageObjects.LogInPage.saveToDraftsButton(LogInPage.java:47)
+	at tests.LoginPageTest.sendEmail(LoginPageTest.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -121,22 +118,22 @@ Session ID: 9d8b4dcc-109b-46a0-b601-8654189951f6
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;compose_272_composeEditor_ifr&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
 System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.13.4&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous9191820326677100153webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:7)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous9191820326677100153webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
-</pre></div><a href='#' onClick='toggleBox("stack-trace441001942", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace441001942'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;compose_272_composeEditor_ifr&quot;}
-Command duration or timeout: 10.12 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous3201429116989007211webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:8959:5)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous3201429116989007211webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11618:1)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous3201429116989007211webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635:11)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous3201429116989007211webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:548:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1326393666", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1326393666'><pre>org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 10.08 seconds
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
 System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.13.4&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9d8b4dcc-109b-46a0-b601-8654189951f6
+Session ID: 20b39621-3a77-4262-a1a5-b985c8dba060
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -144,12 +141,10 @@ Session ID: 9d8b4dcc-109b-46a0-b601-8654189951f6
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at tests.IframeHelper.goToFrameByID(IframeHelper.java:13)
-	at tests.LoginPageTest.sendEmail(LoginPageTest.java:55)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at pageObjects.LogInPage.saveToDraftsButton(LogInPage.java:47)
+	at tests.LoginPageTest.sendEmail(LoginPageTest.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -174,13 +169,14 @@ Session ID: 9d8b4dcc-109b-46a0-b601-8654189951f6
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;compose_272_composeEditor_ifr&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
 System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.13.4&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous9191820326677100153webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:7)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous9191820326677100153webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous3201429116989007211webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:8959:5)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous3201429116989007211webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11618:1)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous3201429116989007211webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635:11)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous3201429116989007211webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:548:5)
 </pre></div></td>
 <td>15</td>
 <td>tests.LoginPageTest@d7b1517</td></tr>
@@ -195,7 +191,7 @@ Driver info: driver.version: unknown
 <tr>
 <td title='tests.LoginPageTest.logInTest()'><b>logInTest</b><br>Test class: tests.LoginPageTest<br>Test method: Login the application</td>
 <td></td>
-<td>9</td>
+<td>17</td>
 <td>tests.LoginPageTest@d7b1517</td></tr>
 </table><p>
 </body>

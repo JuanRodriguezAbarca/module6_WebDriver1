@@ -6,13 +6,13 @@ import org.openqa.selenium.WebElement;
 public class IframeHelper extends DriverClass{
 	
 	
-	public static void goToFrameByID(String id){
-		WebElement resultFrame = getTheDriverNow().findElement(By.id(id));
+	public static void goToFrameByID(String path){
+		WebElement resultFrame = getTheDriverNow().findElement(By.cssSelector(path));
 		getTheDriverNow().switchTo().defaultContent();
 		getTheDriverNow().switchTo().frame(resultFrame);
 	}
 	
-	public void driverBackToMain(){
+	public static void driverBackToMain(){
 		getTheDriverNow().switchTo().defaultContent();
 	}
 

@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Juan_Rodriguez\AppData\Local\Temp\testng-eclipse-336896891\testng-customsuite.xml</span>
+                    <span>C:\Users\Juan_Rodriguez\AppData\Local\Temp\testng-eclipse--950520619\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -141,14 +141,13 @@
                   <a name="sendEmail">
                   </a> <!-- sendEmail -->
                   <span class="method-name">sendEmail</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;compose_272_composeEditor_ifr&quot;}
-Command duration or timeout: 10.12 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 10.08 seconds
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
 System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.13.4&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9d8b4dcc-109b-46a0-b601-8654189951f6
+Session ID: 20b39621-3a77-4262-a1a5-b985c8dba060
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -156,12 +155,10 @@ Session ID: 9d8b4dcc-109b-46a0-b601-8654189951f6
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at tests.IframeHelper.goToFrameByID(IframeHelper.java:13)
-	at tests.LoginPageTest.sendEmail(LoginPageTest.java:55)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at pageObjects.LogInPage.saveToDraftsButton(LogInPage.java:47)
+	at tests.LoginPageTest.sendEmail(LoginPageTest.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -186,13 +183,14 @@ Session ID: 9d8b4dcc-109b-46a0-b601-8654189951f6
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;compose_272_composeEditor_ifr&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
 System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.13.4&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous9191820326677100153webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:7)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous9191820326677100153webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous3201429116989007211webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:8959:5)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous3201429116989007211webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11618:1)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous3201429116989007211webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635:11)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous3201429116989007211webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:548:5)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -221,7 +219,7 @@ Driver info: driver.version: unknown
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Juan_Rodriguez\AppData\Local\Temp\testng-eclipse-336896891\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Juan_Rodriguez\AppData\Local\Temp\testng-eclipse--950520619\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -272,18 +270,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'sendEmail')
+data.setCell(0, 1, 'logInTest')
 data.setCell(0, 2, 'tests.LoginPageTest')
-data.setCell(0, 3, 15656);
+data.setCell(0, 3, 17781);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'logInTest')
+data.setCell(1, 1, 'sendEmail')
 data.setCell(1, 2, 'tests.LoginPageTest')
-data.setCell(1, 3, 9528);
+data.setCell(1, 3, 15653);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <span class="suite-total-time">Total running time: 33 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -316,17 +314,17 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">logInTest</span>
-                <span class="method-start">13250 ms</span>
+                <span class="method-start">11623 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">sendEmail</span>
-                <span class="method-start">22780 ms</span>
+                <span class="method-start">29406 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">38466 ms</span>
+                <span class="method-start">45076 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
