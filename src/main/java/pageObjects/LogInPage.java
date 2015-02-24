@@ -47,7 +47,7 @@ public class LogInPage extends DriverClass {
 	}
 	
 	public WebElement saveToDraftsButton(){
-	return getTheDriverNow().findElement(By.xpath(".//*[@id='b-toolbar__right']/div/div/div[2]/div[2]"));
+	return getTheDriverNow().findElement(By.xpath("//div[@id='b-toolbar__right']/div[3]/div/div[2]/div[2]"));
 }
 	
 

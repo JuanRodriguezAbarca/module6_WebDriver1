@@ -1,7 +1,7 @@
 package tests;
 
 import org.testng.Assert;
-
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -58,11 +58,31 @@ public class LoginPageTest extends DriverClass{
 		loginPage.emailBody().sendKeys(constants.SUBJECT);
 		IframeHelper.driverBackToMain();
 		Thread.sleep(5000);
-
-		loginPage.saveToDraftsButton().click();
+		System.out.println("Before click Save");
+		loginPage.saveToDraftsButton().sendKeys("\n");
+		System.out.println("Before go to Drafts");
 		loginPage.goToDraftsButton().click();
+		System.out.println("Before click alert");
+		JavascriptExecutor js = (JavascriptExecutor) getTheDriverNow();
+		
+/**
+ * Solution Found in internet related with the error: JavaScript Error: "e is null" 
+ */
+//		while (true) // Handle timeout somewhere
+//		{
+//		boolean ata = (Boolean) js
+//		.executeScript("return jQuery.active == 0");
+//		if (ata)
+//		break;
+//		try {
+//		Thread.sleep(1000);
+//		} catch (InterruptedException e) {
+//		// TODO Auto-generated catch block
+//		e.printStackTrace();
+//		}
+//		} 
 		Thread.sleep(5000);
-//		getTheDriverNow().switchTo().alert().accept();
+		getTheDriverNow().switchTo().alert().accept();
 		
 		
 	}
