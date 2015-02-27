@@ -9,7 +9,6 @@
           <include name="sendEmailFromDrafts"/>
           <include name="initTesting"/>
           <include name="logInTest"/>
-          <include name="sendEmailToDrafts"/>
         </methods>
       </class> <!-- tests.LoginPageTest -->
     </classes>
