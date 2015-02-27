@@ -1,8 +1,17 @@
 package tests;
 
-import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -22,7 +31,7 @@ public class LoginPageTest extends DriverClass{
 	public void initTesting(){
 		setTheDriverNow(new FirefoxDriver());
 		getTheDriverNow().manage().window().maximize();
-		getTheDriverNow().get("https://mail.ru/");
+		getTheDriverNow().get("https://gmail.com");
 		System.out.println("Site Loaded!!!");
 	}
 	
@@ -31,7 +40,7 @@ public class LoginPageTest extends DriverClass{
 		getTheDriverNow().quit();
 	}
 
-	@Test(description="Login the application")
+	@Test(description="Login the application", priority=0)
 	public void logInTest(){
 		String titulo = getTheDriverNow().getTitle();
 		System.out.println(titulo);
@@ -44,15 +53,15 @@ public class LoginPageTest extends DriverClass{
 		String userLogged = loginPage.userLogged().getText();
 		System.out.println(userLogged);
 		//The test:
-		Assert.assertTrue(userLogged.contains(constants.USERNAME));
+		AssertJUnit.assertTrue(userLogged.contains(constants.USERNAME));
 	}
 	
-	@Test(description="Save Email To Draft", dependsOnMethods="logInTest")
-	public void sendEmail() throws Throwable{
+	@Test(description="Save Email To Draft", dependsOnMethods="logInTest", priority=5)
+	public void sendEmailToDrafts() throws Throwable{
 		loginPage.composeEmailButton().click();
 		
 		loginPage.emailReceiver().sendKeys(constants.RECIVER);
-		loginPage.emailSubject().sendKeys("TestWebDriver");
+		loginPage.emailSubject().sendKeys(constants.TOPIC);
 
 		IframeHelper.goToFrameByID(constants.IFRAMEBODYMAIL);
 		loginPage.emailBody().sendKeys(constants.SUBJECT);
@@ -68,23 +77,45 @@ public class LoginPageTest extends DriverClass{
 /**
  * Solution Found in internet related with the error: JavaScript Error: "e is null" 
  */
-//		while (true) // Handle timeout somewhere
-//		{
-//		boolean ata = (Boolean) js
-//		.executeScript("return jQuery.active == 0");
-//		if (ata)
-//		break;
-//		try {
-//		Thread.sleep(1000);
-//		} catch (InterruptedException e) {
-//		// TODO Auto-generated catch block
-//		e.printStackTrace();
-//		}
-//		} 
+		while (true) // Handle timeout somewhere
+		{
+		boolean ata = (Boolean) js
+		.executeScript("return jQuery.active == 0");
+		if (ata)
+		break;
+		try {
+		Thread.sleep(1000);
+		} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		}
+		} 
 		Thread.sleep(5000);
 		getTheDriverNow().switchTo().alert().accept();
 		
 		
 	}
+	
+	@Test(description="Open Drafts and sent the mail", dependsOnMethods="logInTest", priority=2)
+	public void sendEmailFromDrafts()throws Throwable{
+		loginPage.goToDraftsButton().click();
+		Thread.sleep(5000);
+		for (WebElement mail:loginPage.getListOfDrafts()){
+			String mailSubject= mail.getAttribute("title");
+			System.out.println("Title found: "+mailSubject);
+			if (mailSubject.contains(constants.RECIVER)){
+				System.out.println("Proceeding to click on mail "+mailSubject);
+				Thread.sleep(5000);
+				mail.click();
+			}
+		}
+		System.out.println("Changing the frame in case is necessary");
+		IframeHelper.driverBackToMain();
+		System.out.println("Calling the wait");
+		WebDriverWait wait = new WebDriverWait(getTheDriverNow(), 10);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='b-nav b-nav_folders b-nav_icons']/div[2]/a")));
+		System.out.println("Send email should be clickable now");
+		loginPage.sendEmailButton().click();
+	}
 
-}
+} 

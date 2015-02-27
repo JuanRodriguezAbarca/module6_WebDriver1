@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 24 20:50:35 CET 2015</td>
+<td>Started on:</td><td>Fri Feb 27 15:55:36 CET 2015</td>
 </tr>
-<tr><td>Total time:</td><td>58 seconds (58160 ms)</td>
+<tr><td>Total time:</td><td>1220 seconds (1220786 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,14 +75,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.LoginPageTest.sendEmail()'><b>sendEmail</b><br>Test class: tests.LoginPageTest<br>Test method: Save Email To Draft</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: [JavaScript Error: &quot;e is null&quot; {file: &quot;file:///C:/Users/Juan/AppData/Local/Temp/anonymous7223444191532791546webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js&quot; line: 7854}]&apos;[JavaScript Error: &quot;e is null&quot; {file: &quot;file:///C:/Users/Juan/AppData/Local/Temp/anonymous7223444191532791546webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js&quot; line: 7854}]&apos; when calling method: [nsICommandProcessor::execute]
-Command duration or timeout: 82 milliseconds
+<td title='tests.LoginPageTest.sendEmailFromDrafts()'><b>sendEmailFromDrafts</b><br>Test class: tests.LoginPageTest<br>Test method: Open Drafts and sent the mail</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 10.10 seconds
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
-System info: host: &apos;Chaparrón&apos;, ip: &apos;10.0.0.5&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_31&apos;
+System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.24.98&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 4e565eb4-14ab-4a71-af9a-ec14563e6cb5
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 24686b19-363b-4986-867d-3d980c64731f
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -90,10 +90,9 @@ Session ID: 4e565eb4-14ab-4a71-af9a-ec14563e6cb5
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.firefox.FirefoxDriver.access$100(FirefoxDriver.java:73)
-	at org.openqa.selenium.firefox.FirefoxDriver$1$1.implicitlyWait(FirefoxDriver.java:219)
-	at utils.DriverClass.getTheDriverNow(DriverClass.java:13)
-	at tests.LoginPageTest.sendEmail(LoginPageTest.java:66)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at tests.LoginPageTest.sendEmailFromDrafts(LoginPageTest.java:109)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -118,18 +117,22 @@ Session ID: 4e565eb4-14ab-4a71-af9a-ec14563e6cb5
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.WebDriverException: [JavaScript Error: &quot;e is null&quot; {file: &quot;file:///C:/Users/Juan/AppData/Local/Temp/anonymous7223444191532791546webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js&quot; line: 7854}]&apos;[JavaScript Error: &quot;e is null&quot; {file: &quot;file:///C:/Users/Juan/AppData/Local/Temp/anonymous7223444191532791546webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js&quot; line: 7854}]&apos; when calling method: [nsICommandProcessor::execute]
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
-System info: host: &apos;Chaparrón&apos;, ip: &apos;10.0.0.5&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_31&apos;
+System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.24.98&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
 Driver info: driver.version: unknown
-</pre></div><a href='#' onClick='toggleBox("stack-trace31140627", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace31140627'><pre>org.openqa.selenium.WebDriverException: [JavaScript Error: &quot;e is null&quot; {file: &quot;file:///C:/Users/Juan/AppData/Local/Temp/anonymous7223444191532791546webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js&quot; line: 7854}]&apos;[JavaScript Error: &quot;e is null&quot; {file: &quot;file:///C:/Users/Juan/AppData/Local/Temp/anonymous7223444191532791546webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js&quot; line: 7854}]&apos; when calling method: [nsICommandProcessor::execute]
-Command duration or timeout: 82 milliseconds
+	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:8959:5)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11618:1)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635:11)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:548:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1302141801", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1302141801'><pre>org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 10.10 seconds
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
-System info: host: &apos;Chaparrón&apos;, ip: &apos;10.0.0.5&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_31&apos;
+System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.24.98&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 4e565eb4-14ab-4a71-af9a-ec14563e6cb5
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 24686b19-363b-4986-867d-3d980c64731f
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -137,10 +140,9 @@ Session ID: 4e565eb4-14ab-4a71-af9a-ec14563e6cb5
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.firefox.FirefoxDriver.access$100(FirefoxDriver.java:73)
-	at org.openqa.selenium.firefox.FirefoxDriver$1$1.implicitlyWait(FirefoxDriver.java:219)
-	at utils.DriverClass.getTheDriverNow(DriverClass.java:13)
-	at tests.LoginPageTest.sendEmail(LoginPageTest.java:66)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at tests.LoginPageTest.sendEmailFromDrafts(LoginPageTest.java:109)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -165,13 +167,121 @@ Session ID: 4e565eb4-14ab-4a71-af9a-ec14563e6cb5
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.WebDriverException: [JavaScript Error: &quot;e is null&quot; {file: &quot;file:///C:/Users/Juan/AppData/Local/Temp/anonymous7223444191532791546webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js&quot; line: 7854}]&apos;[JavaScript Error: &quot;e is null&quot; {file: &quot;file:///C:/Users/Juan/AppData/Local/Temp/anonymous7223444191532791546webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js&quot; line: 7854}]&apos; when calling method: [nsICommandProcessor::execute]
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
-System info: host: &apos;Chaparrón&apos;, ip: &apos;10.0.0.5&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_31&apos;
+System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.24.98&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
 Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:8959:5)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11618:1)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635:11)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:548:5)
 </pre></div></td>
-<td>14</td>
-<td>tests.LoginPageTest@17b1517</td></tr>
+<td>1166</td>
+<td>tests.LoginPageTest@279ad2e3</td></tr>
+<tr>
+<td title='tests.LoginPageTest.sendEmailToDrafts()'><b>sendEmailToDrafts</b><br>Test class: tests.LoginPageTest<br>Test method: Save Email To Draft</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 10.13 seconds
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
+System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.24.98&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 24686b19-363b-4986-867d-3d980c64731f
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:89)
+	at tests.LoginPageTest.sendEmailToDrafts(LoginPageTest.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
+System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.24.98&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:8959:5)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11618:1)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635:11)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:548:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1043317832", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1043317832'><pre>org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 10.13 seconds
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
+System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.24.98&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=30.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 24686b19-363b-4986-867d-3d980c64731f
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:89)
+	at tests.LoginPageTest.sendEmailToDrafts(LoginPageTest.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
+System info: host: &apos;EPPLKRAW0119&apos;, ip: &apos;10.143.24.98&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_20&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:8959:5)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11618:1)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635:11)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Juan_Rodriguez/AppData/Local/Temp/anonymous482380186249601794webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:548:5)
+</pre></div></td>
+<td>22</td>
+<td>tests.LoginPageTest@279ad2e3</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -183,8 +293,8 @@ Driver info: driver.version: unknown
 <tr>
 <td title='tests.LoginPageTest.logInTest()'><b>logInTest</b><br>Test class: tests.LoginPageTest<br>Test method: Login the application</td>
 <td></td>
-<td>17</td>
-<td>tests.LoginPageTest@17b1517</td></tr>
+<td>10</td>
+<td>tests.LoginPageTest@279ad2e3</td></tr>
 </table><p>
 </body>
 </html>

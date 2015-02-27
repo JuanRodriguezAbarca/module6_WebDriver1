@@ -50,9 +50,13 @@ public class LogInPage extends DriverClass {
 	return getTheDriverNow().findElement(By.xpath("//div[@id='b-toolbar__right']/div[3]/div/div[2]/div[2]"));
 }
 	
+	public WebElement sendEmailButton(){
+		return getTheDriverNow().findElement(By.xpath("//div[@class='b-nav b-nav_folders b-nav_icons']/div[2]/a"));
+	}
+	
 
 	
 	public List<WebElement> getListOfDrafts(){
-		return getTheDriverNow().findElements(By.xpath("//div[@data-mnemo='letters']/div[2]/div"));
+		return getTheDriverNow().findElements(By.xpath("//div[@class='b-datalist__item__body']/a"));
 	}
 }

@@ -6,9 +6,10 @@
       <class name="tests.LoginPageTest">
         <methods>
           <include name="tearDown"/>
+          <include name="sendEmailFromDrafts"/>
           <include name="initTesting"/>
           <include name="logInTest"/>
-          <include name="sendEmail"/>
+          <include name="sendEmailToDrafts"/>
         </methods>
       </class> <!-- tests.LoginPageTest -->
     </classes>
