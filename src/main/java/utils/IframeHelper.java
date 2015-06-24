@@ -3,7 +3,7 @@ package utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class IframeHelper extends DriverClass{
+public class IframeHelper extends AbstractPage{
 	
 	
 	public static void goToFrameByID(String path){

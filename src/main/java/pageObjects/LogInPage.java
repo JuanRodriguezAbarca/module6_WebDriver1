@@ -2,10 +2,15 @@ package pageObjects;
 
 import java.util.List;
 
+import javax.xml.xpath.XPath;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
+
+
+import utils.AbstractPage;
 import utils.DriverClass;
 
 public class LogInPage extends DriverClass {
@@ -22,28 +27,32 @@ public class LogInPage extends DriverClass {
 		return getTheDriverNow().findElement(By.id("signIn"));
 	}
 	
+	public WebElement idNextButton(){
+		return waitForExpectedElement(By.id("next"));
+	}
+	
 	public WebElement rememberMeButton(){
 		return getTheDriverNow().findElement(By.id("PersistentCookie"));
 	}
 	
 	public WebElement userLogged(){
-		return getTheDriverNow().findElement(By.xpath("//div[@id='gb']/div/div/div/div[3]/div/a"));
+		return waitForExpectedElement(By.xpath("//a[@href='https://accounts.google.com/SignOutOptions?hl=en&continue=https://mail.google.com/mail&service=mail']"));
 	}
 	
 	public WebElement composeEmailButton(){
-		return getTheDriverNow().findElement(By.xpath("//div[@id=':3r']/div/div"));
+		return waitForExpectedElement(By.xpath("//div[@gh='cm']"));
 	}
 	
 	public WebElement emailReceiver(){
-		return getTheDriverNow().findElement(By.xpath("//div[@class='AD']//table//table[1]//tr[1]/td[2]"));
+		return getTheDriverNow().findElement(By.xpath("//div[@id=':ig']//textarea"));
 	}
 	
 	public WebElement emailSubject(){
-		return getTheDriverNow().findElement(By.xpath("//div[@class='AD']/div/div/div[3]/div/div/div[4]//td[2]/form/div[3]/input"));
+		return getTheDriverNow().findElement(By.xpath("//div[@id=':kb']//input"));
 	}
 	
 	public WebElement emailBody(){
-		return getTheDriverNow().findElement(By.xpath("//div[@class='AD']/div/div/div[3]/div/div/div[4]//td[2]/table//tr[1]/td[1]/div[1]/div[1]"));
+		return getTheDriverNow().findElement(By.xpath("//div[@id=':lc']"));
 	}
 	
 	public WebElement goToDraftsButton(){
